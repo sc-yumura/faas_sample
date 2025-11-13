@@ -1,6 +1,7 @@
 import json
 import os
 import logging
+import main
 
 # Initialize the logger
 logger = logging.getLogger()
@@ -17,9 +18,10 @@ def lambda_handler(event, context):
         Dict containing status message
     """
     try:
+        time = now()
         return {
             "statusCode": 200,
-            "message": "Receipt processed successfully"
+            "message": time
         }
 
     except Exception as e:

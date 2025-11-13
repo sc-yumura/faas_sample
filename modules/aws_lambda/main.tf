@@ -1,7 +1,7 @@
 data "archive_file" "app" {
   type        = "zip"
   source_dir  = var.source_path
-  output_path = "./app.zip"
+  output_path = "./lambda.zip"
 }
 
 resource "aws_lambda_function" "app" {
